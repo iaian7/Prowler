@@ -59,7 +59,7 @@ body {
     background-image: url(Images/Form-Background-Large.png);
     background-repeat: repeat-x;
     height: 96px;
-    border-color: rgba(0, 0, 0, 0.382812);
+    border-color: rgba(0, 0, 0, 0.378906);
     top: 34px;
     margin-bottom: auto;
     right: 0px;
@@ -77,7 +77,7 @@ body {
     margin-right: 0px;
     margin-bottom: 0px;
     width: auto;
-    border-color: rgba(0, 0, 0, 0.417969);
+    border-color: rgba(0, 0, 0, 0.414062);
 }
 
 #explanation {
@@ -89,10 +89,10 @@ body {
     font-size: 10pt;
     text-align: left;
     left: 22px;
-    top: 116px;
+    top: 66px;
     right: 22px;
     width: auto;
-    bottom: 84px;
+    bottom: 134px;
     height: auto;
 }
 
@@ -368,9 +368,9 @@ body {
     right: 12px;
     width: 256px;
     left: 22px;
-    top: 156px;
     min-height: 31px;
-    bottom: 53px;
+    top: 106px;
+    bottom: 103px;
     height: auto;
 }
 
@@ -421,7 +421,7 @@ body {
     width: 252px;
     left: 0px;
     text-align: center;
-    border-color: rgba(0, 0, 0, 0.488281);
+    border-color: rgba(0, 0, 0, 0.484375);
     background-position: 50% 50%;
 }
 
@@ -458,30 +458,6 @@ body {
     width: auto;
 }
 
-#location {
-    position: absolute;
-    font-family: HelveticaNeue;
-    color: rgb(255, 255, 255);
-    -webkit-border-top-left-radius: 5px 5px;
-    -webkit-border-top-right-radius: 5px 5px;
-    -webkit-border-bottom-left-radius: 5px 5px;
-    -webkit-border-bottom-right-radius: 5px 5px;
-    border-width: 1px;
-    background-color: rgba(0, 0, 0, 0);
-    background-repeat: repeat-x;
-    background-image: url(Images/formBackground%202.png);
-    border-style: solid;
-    width: 252px;
-    left: 22px;
-    font-size: 11pt;
-    overflow: hidden;
-    text-align: left;
-    border-color: rgba(0, 0, 0, 0.375);
-    top: 37px;
-    margin-right: auto;
-    background-position: 50% 50%;
-}
-
 #api {
     position: absolute;
     color: rgb(255, 255, 255);
@@ -499,8 +475,8 @@ body {
     font-size: 11pt;
     font-family: 'Helvetica Neue';
     text-align: left;
-    border-color: rgba(0, 0, 0, 0.375);
-    top: 87px;
+    border-color: rgba(0, 0, 0, 0.371094);
+    top: 37px;
     margin-right: auto;
     background-position: 50% 50%;
 }
@@ -517,23 +493,6 @@ body {
     width: 256px;
     left: 22px;
     min-height: 12px;
-    top: 72px;
-    bottom: 150px;
-    height: auto;
-}
-
-#locationText {
-    font-family: HelveticaNeue;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    position: absolute;
-    color: rgb(255, 255, 255);
-    font-size: 10pt;
-    text-align: left;
-    right: 12px;
-    width: 256px;
-    min-height: 18px;
-    left: 22px;
     top: 22px;
     bottom: 200px;
     height: auto;

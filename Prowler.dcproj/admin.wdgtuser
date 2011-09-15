@@ -25,11 +25,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>3bfb92bb7a59b041</string>
+		<string>2fdf1ae28759b041</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/Un/UnxUHwCPHWKctaUXGCL53k+++TI/-Tmp-/Dashcode/.Prowler.dcprojEsEbEE/Prowler.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/Un/UnxUHwCPHWKctaUXGCL53k+++TI/-Tmp-/Dashcode/.Prowler.dcprojvc9Yxk/Prowler.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -37,13 +37,13 @@
 		<key>percent-type</key>
 		<integer>2</integer>
 		<key>percent-x</key>
-		<real>0.2604166567325592</real>
+		<real>0.40572917461395264</real>
 		<key>percent-y</key>
-		<real>0.17833332717418671</real>
+		<real>0.19333332777023315</real>
 		<key>pos-x</key>
-		<integer>1120</integer>
+		<integer>841</integer>
 		<key>pos-y</key>
-		<integer>214</integer>
+		<integer>232</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -52,7 +52,7 @@
 		<key>Save</key>
 		<false/>
 		<key>SavePath</key>
-		<string>/Volumes/Projects HD/1-Projects/VF Prowler</string>
+		<string>/Users/admin/Dropbox/Documents/Widgets/VF Prowler</string>
 		<key>WidgetDeployName</key>
 		<string>Prowler</string>
 	</dict>
@@ -229,15 +229,7 @@
 		</array>
 	</array>
 	<key>Objects view last selections</key>
-	<array>
-		<array>
-			<integer>0</integer>
-			<integer>0</integer>
-			<integer>2</integer>
-			<integer>0</integer>
-			<integer>0</integer>
-		</array>
-	</array>
+	<array/>
 	<key>Opened Steps</key>
 	<array>
 		<integer>0</integer>

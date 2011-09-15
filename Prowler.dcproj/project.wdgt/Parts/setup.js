@@ -14,7 +14,6 @@ var dashcodePartSpecs = {
     "group": { "creationFunction": "CreateButton", "leftImageWidth": 5, "onclick": "showMain", "rightImageWidth": 5, "text": "group" },
     "iaian7com": { "creationFunction": "CreateText", "text": "iaian7com" },
     "info": { "backgroundStyle": "black", "creationFunction": "CreateInfoButton", "foregroundStyle": "white", "frontID": "front", "onclick": "showBack" },
-    "locationText": { "creationFunction": "CreateText", "text": "locationText" },
     "new": { "creationFunction": "CreateText", "text": "new" },
     "newVersion": { "creationFunction": "CreateText", "text": "newVersion" },
     "priority": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "name": "priority", "options": [["very low", "-2"], ["moderate", "-1"], ["normal", "0", true], ["high", "1"], ["emergency", "2"]], "rightImageWidth": 16 },

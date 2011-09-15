@@ -121,7 +121,6 @@ var wid = widget.identifier;
 var prefAPI = loadPref(wid+"api","");
 var prefApp = loadPref(wid+"app","Prowler");
 var prefPriority = loadPref(wid+"priority",2);
-var prefLocation = loadPref("loc","/usr/local/bin/");
 
 // Preference Saving
 
@@ -139,7 +138,6 @@ function loadPrefs() {
 	document.getElementById("api").value = prefAPI;
 //	document.getElementById("app").object.setSelectedIndex(prefApp);
 	document.getElementById("priority").object.setSelectedIndex(prefPriority);
-	document.getElementById("location").value = prefLocation;
 }
 
 function savePref(key,value) {
@@ -153,7 +151,6 @@ function updatePrefs() {
 		widget.setPreferenceForKey(prefAPI,wid+"api");
 		widget.setPreferenceForKey(prefApp,wid+"app");
 		widget.setPreferenceForKey(prefPriority,wid+"priority");
-		widget.setPreferenceForKey(prefLocation,"loc");
 	}
 }
 
@@ -162,7 +159,6 @@ function erasePrefs() {
 		widget.setPreferenceForKey(null,wid+"api");
 		widget.setPreferenceForKey(null,wid+"app");
 		widget.setPreferenceForKey(null,wid+"priority");
-		widget.setPreferenceForKey(null,"loc");
 	}
 }
 
@@ -175,10 +171,6 @@ function updatePriority(event) {
 	updatePrefs();
 }
 
-function updateLocation(event) {
-	prefLocation = location.value;
-}
-
 function updateApi(event) {
 	prefAPI = api.value;
 }
@@ -189,30 +181,38 @@ function push(event) {
 	publish();
 }
 
-function publish(api,app,event,note,priority,location){
+function publish(api,app,event,note,priority){
 	api = api || document.getElementById("api").value;
 	app = app || "Prowler";
 	event = event || document.getElementById("event").value;
 	note = note || description.value;
 	priority = priority || document.getElementById("priority").object.getValue();
-	location = location || prefLocation;
 	app = escapeCareful(app);
 	event = escapeCareful(event);
 	note = escapeCareful(note);
-	widget.system(location+"prowl.pl -apikey="+api+" -application=\""+app+"\" -event=\""+event+"\" -notification=\""+note+"\" -priority="+priority, endHandler);
+
+	var request = new XMLHttpRequest();
+	var address = "https://prowl.weks.net/publicapi/add?apikey="+api+"&priority="+priority+"&application="+app+"&event="+event+"&description="+note;
+	request.open("POST", address, false);
+	request.send(null);
+	return response(request.responseText);
+}
+
+function response(event) {
+	if (event.match("code=\"200")){
+//		document.getElementById("successText").innerHTML = event;
+		showSuccess();
+	} else if (event.match("code=\"500")){
+		document.getElementById("failText").innerHTML = event;
+		showFail();
+	} else {
+		document.getElementById("wrongText").innerHTML = event;
+		showWrong();
+	}
 }
 
 function escapeCareful(event) {
 	return event.replace(/\"/gi,"\\\"");
-}
-
-function endHandler(event) {
-	if (event.outputString){
-		document.getElementById("successText").innerText = event.outputString;
-		showSuccess();
-	} else {
-		showWrong();
-	}
 }
 
 // Key listeners

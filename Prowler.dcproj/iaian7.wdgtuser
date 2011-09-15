@@ -8,16 +8,12 @@
 		<integer>8</integer>
 		<key>SplitViewConfig</key>
 		<integer>3</integer>
-		<key>_collapsingFrameDimension</key>
-		<real>0.0</real>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
-		<key>_percentageOfCollapsedView</key>
-		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1238, 416}}</string>
-			<string>{{0, 426}, {1238, 612}}</string>
+			<string>{{0, 0}, {1195, 304}}</string>
+			<string>{{0, 314}, {1195, 425}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -46,41 +42,40 @@
 		<integer>220</integer>
 	</dict>
 	<key>DeploymentOptions</key>
-	<dict/>
+	<dict>
+		<key>Destination</key>
+		<string>localhost.default</string>
+		<key>enableSimulation</key>
+		<true/>
+		<key>simulatedHost</key>
+		<string>iaian7macbookpro.local</string>
+	</dict>
 	<key>Design time language</key>
 	<string>en.lproj</string>
 	<key>MainSplitViewGeometry</key>
 	<dict>
-		<key>_collapsingFrameDimension</key>
-		<real>0.0</real>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
-		<key>_percentageOfCollapsedView</key>
-		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {244, 1059}}</string>
-			<string>{{245, 0}, {1239, 1059}}</string>
+			<string>{{0, 0}, {244, 760}}</string>
+			<string>{{245, 0}, {1196, 760}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>0 98 1483 1080 0 0 1920 1178 </string>
+	<string>0 97 1440 781 0 0 1440 878 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
 		<integer>5</integer>
 		<key>SplitViewConfig</key>
-		<integer>1</integer>
-		<key>_collapsingFrameDimension</key>
-		<real>0.0</real>
+		<integer>3</integer>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
-		<key>_percentageOfCollapsedView</key>
-		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {245, 544}}</string>
-			<string>{{0, 554}, {245, 484}}</string>
+			<string>{{0, 0}, {246, 353}}</string>
+			<string>{{0, 363}, {246, 376}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -201,5 +196,21 @@
 		<string>front</string>
 		<string>success</string>
 	</array>
+	<key>Widget</key>
+	<dict>
+		<key>Objects view expanded items</key>
+		<array>
+			<array>
+				<integer>0</integer>
+			</array>
+		</array>
+		<key>Objects view last selections</key>
+		<array/>
+		<key>Visible StackLayout Views</key>
+		<array>
+			<string>front</string>
+			<string>main</string>
+		</array>
+	</dict>
 </dict>
 </plist>

@@ -48,10 +48,8 @@
     </div>
     <div id="back">
         <img id="backImg" src="Images/back.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.backimage" apple-style=" image-radius: 10,10,10,10; image-border: 1; image-border-color: 0,0,0,0.5; image-border-width: 1; shadow-include-shadow: 1; shadow-offset: -1.00,-6.00; shadow-color: 0,0,0,0.3333;">
-        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="locationText"></div>
-        <input type="text" name="location" value="/usr/local/bin/" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="location" apple-text-overflow="" onchange="updateLocation(event)">
         <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="apiText"></div>
-        <input type="text" name="api" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="api" onchange="updateApi(event)">
+        <input type="text" name="api" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="api" onchange="updateApi(event)" onkeyup="updateApi(event)">
         <div apple-part="com.apple.Dashcode.part.roundedtextbutton" class="apple-no-children" apple-style="image-theme: 0; image-shape: 3; image-button-type: 0; image-opacity: 1.00; image-top-color: 0,0,0,0.4; image-bottom-color: 0.615400016,0.615400016,0.615400016,1; image-radius: 5,5,5,5; image-border: 1; image-border-color: 0,0,0,0.5; image-border-width: 1; shine-on: 1; shine-strength: 0.20; shine-alpha-level: 0.20; shine-height: 0.50; glass-arc-height: 0.00; embossed-on: 0; embossed-depth: 1; embossed-shadow: 0.5; embossed-highlight: 0.5; shadow-include-shadow: 0;" id="doneSave"></div>
         <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="explanation"></div>
         <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="iaian7com" onclick="iaian7(event)"></div>
