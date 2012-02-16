@@ -19,3 +19,4 @@ var localizedStrings = {
     "success": "message was\nsent successfully",
     "wrong": "invalid API key\nor other error"
 };
+
