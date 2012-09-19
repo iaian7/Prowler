@@ -11,12 +11,11 @@ var dashcodePartSpecs = {
     "explanation": { "text": "explanation", "view": "DC.Text" },
     "failButton": { "creationFunction": "CreateButton", "leftImageWidth": 5, "onclick": "showMain", "rightImageWidth": 5, "text": "done", "view": "DC.View" },
     "failText": { "text": "fail", "view": "DC.Text" },
-    "group": { "creationFunction": "CreateButton", "leftImageWidth": 5, "onclick": "showMain", "rightImageWidth": 5, "text": "group", "view": "DC.View" },
     "iaian7com": { "text": "iaian7com", "view": "DC.Text" },
     "info": { "backgroundStyle": "black", "creationFunction": "CreateInfoButton", "foregroundStyle": "white", "frontID": "front", "onclick": "showBack", "view": "DC.View" },
     "new": { "text": "new", "view": "DC.Text" },
     "newVersion": { "text": "newVersion", "view": "DC.Text" },
-    "priority": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "name": "priority", "options": [["very low", "-2"], ["moderate", "-1"], ["normal", "0", true], ["high", "1"], ["emergency", "2"]], "rightImageWidth": 16, "view": "DC.View" },
+    "priority": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "name": "priority", "onchange": "updatePriority", "options": [["very low", "-2"], ["moderate", "-1"], ["normal", "0", true], ["high", "1"], ["emergency", "2"]], "rightImageWidth": 16, "view": "DC.View" },
     "push": { "creationFunction": "CreateButton", "leftImageWidth": 5, "onclick": "push", "rightImageWidth": 5, "text": "push", "view": "DC.View" },
     "skip": { "creationFunction": "CreateButton", "leftImageWidth": 5, "onclick": "showMain", "rightImageWidth": 5, "text": "skip", "view": "DC.View" },
     "stack": { "subviewsTransitions": [{ "direction": "right-left", "duration": "", "timing": "ease-in-out", "type": "push" }, { "direction": "right-left", "duration": "", "timing": "ease-in-out", "type": "push" }, { "direction": "right-left", "duration": "", "timing": "ease-in-out", "type": "push" }, { "direction": "right-left", "duration": "", "timing": "ease-in-out", "type": "push" }, { "direction": "right-left", "duration": "", "timing": "ease-in-out", "type": "push" }], "view": "DC.StackLayout" },
@@ -26,4 +25,5 @@ var dashcodePartSpecs = {
     "wrongButton": { "creationFunction": "CreateButton", "leftImageWidth": 5, "onclick": "showMain", "rightImageWidth": 5, "text": "done", "view": "DC.View" },
     "wrongText": { "text": "wrong", "view": "DC.Text" }
 };
+
 

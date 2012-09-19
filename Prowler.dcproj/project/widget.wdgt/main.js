@@ -195,13 +195,13 @@ function publish(api,app,event,note,priority){
 function response(event) {
 	if (event.match("code=\"200")){
 //		document.getElementById("successText").innerHTML = event;
-		showSuccess();
+		return showSuccess();
 	} else if (event.match("code=\"500")){
 		document.getElementById("failText").innerHTML = event;
-		showFail();
+		return showFail();
 	} else {
 		document.getElementById("wrongText").innerHTML = event;
-		showWrong();
+		return showWrong();
 	}
 }
 
@@ -219,6 +219,8 @@ function selectIt(event) {
 	event.select();
 }
 
+
+
 // CurrentView animations
 
 function showMain(event) {
@@ -227,6 +229,9 @@ function showMain(event) {
 
 function showSuccess(event) {
 	document.getElementById("stack").object.setCurrentView("success", true, true);
+	setTimeout(function() {
+		return showMain();
+	}, 1200);
 }
 
 function showFail(event) {
@@ -253,25 +258,35 @@ function getKeyValue(plist, key) {
 	return false;
 }
 
+
+
 // Auto Update
 
 function versionCheck(event) {
 	var request = new XMLHttpRequest();
 	var address = "http://iaian7.com/files/dashboard/prowler/version.php?RandomKey=" + Date.parse(new Date());
-	request.open("GET", address,false);
+	request.onload = function() { versionCheckEnd(request); };
+	request.open("GET", address);
+//	request.setRequestHeader("Cache-Control", "no-cache");
 	request.send(null);
-	var versions = request.responseText.split("\n");
+}
 
-	var bundleVersion = getKeyValue("Info.plist", "CFBundleVersion"); 
-	var websiteVersion = versions[0];
-//	alert("bundleVersion: "+bundleVersion);
-//	alert("websiteVersion: "+websiteVersion);
+function versionCheckEnd(request){
+	if (request.status == 200) {
+		var versions = request.responseText.split("\n");
+		var bundleVersion = getKeyValue("Info.plist", "CFBundleVersion");
+		var websiteVersion = versions[0];
+//		alert("bundleVersion: "+bundleVersion);
+//		alert("websiteVersion: "+websiteVersion);
 
-	if (websiteVersion != bundleVersion) {
-		document.getElementById("newVersion").innerHTML = "version "+versions[0]+"<br/>"+versions[1];
-		showUpdate();
+		if (websiteVersion > bundleVersion) {
+			document.getElementById("newVersion").innerHTML = "version "+versions[0]+"<br/>"+versions[1];
+			return showUpdate();
+		} else {
+//			alert("you have an up to date version");
+		}
 	} else {
-//		alert("you have an up to date version, or there's been an error");
+//		alert("there's been an error fetching HTTP data");
 	}
 }
 
